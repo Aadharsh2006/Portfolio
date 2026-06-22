@@ -1,0 +1,326 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aadharsh E S â€” Software Developer &amp; UI/UX Designer</title>
+<meta name="description" content="Portfolio of Aadharsh E S, Software Developer & UI/UX Designer specializing in Django, Python, and human-centered interfaces." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{% static 'portfolio_app/css/style.css' %}" />
+</head>
+<body class="is-loading">
+
+<!-- Intro boot sequence -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <div class="loader__mark">AES<span class="loader__cursor">_</span></div>
+    <div class="loader__lines" id="loader-lines"></div>
+    <div class="loader__bar-track">
+      <div class="loader__bar-fill" id="loader-bar"></div>
+    </div>
+    <div class="loader__pct" id="loader-pct">00%</div>
+  </div>
+  <div class="loader__panel loader__panel--l"></div>
+  <div class="loader__panel loader__panel--r"></div>
+</div>
+
+<!-- Noise / grid texture overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- Fixed left spec column -->
+<aside class="spec-rail" aria-hidden="true">
+  <div class="spec-rail__top">
+    <span class="spec-rail__mark">AES</span>
+  </div>
+  <div class="spec-rail__mid">
+    <span class="spec-rail__rotated">DEVELOPER &amp; DESIGNER</span>
+  </div>
+  <div class="spec-rail__bottom">
+    <span class="dot-status"></span>
+    <span class="spec-rail__status">AVAILABLE</span>
+  </div>
+</aside>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="section hero">
+    <div class="hero__inner">
+
+      <div class="hero__copy">
+        <p class="eyebrow fade-up">~/intro &nbsp;//&nbsp; software developer &amp; ui/ux designer</p>
+
+        <h1 class="hero__headline fade-up" style="--d:0.08s">
+          I build software<br/>
+          that <span class="hero__accent">looks</span> as good<br/>
+          as it <span class="hero__accent-outline">runs</span>.
+        </h1>
+
+        <p class="hero__bio fade-up" style="--d:0.16s">
+          I'm <strong>Aadharsh E S</strong>, a developer who designs and a designer who ships.
+          I build endâ€‘toâ€‘end web and mobile products â€” from Django backends and MySQL
+          schemas to the interfaces people actually want to use â€” with the same attention
+          to detail on both sides of the screen.
+        </p>
+
+        <div class="hero__actions fade-up" style="--d:0.24s">
+          <a href="#work" class="btn btn--primary">
+            <span>View my work</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+
+        <div class="hero__links fade-up" style="--d:0.32s">
+          <a href="https://github.com/Aadharsh2006" target="_blank" rel="noopener" class="hero__link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.5 0 12.3c0 5.43 3.44 10 8.21 11.64.6.12.82-.27.82-.6 0-.3-.01-1.08-.02-2.12-3.34.74-4.04-1.66-4.04-1.66-.55-1.4-1.33-1.78-1.33-1.78-1.09-.76.08-.74.08-.74 1.2.09 1.84 1.26 1.84 1.26 1.07 1.86 2.81 1.32 3.49 1.01.11-.79.42-1.32.76-1.62-2.66-.31-5.47-1.36-5.47-6.04 0-1.34.46-2.43 1.22-3.29-.12-.31-.53-1.55.12-3.23 0 0 1-.33 3.3 1.25a11.2 11.2 0 0 1 6 0c2.28-1.58 3.29-1.25 3.29-1.25.65 1.68.24 2.92.12 3.23.76.86 1.22 1.95 1.22 3.29 0 4.69-2.81 5.73-5.49 6.03.43.38.81 1.13.81 2.29 0 1.65-.02 2.98-.02 3.39 0 .33.21.72.82.6C20.56 22.3 24 17.73 24 12.3 24 5.5 18.63 0 12 0Z"/></svg>
+            <span>github.com</span>
+            <i class="link-arrow">â†’</i>
+          </a>
+          <a href="https://www.linkedin.com/in/aadharsh-e-s-7a106131a/" target="_blank" rel="noopener" class="hero__link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+            <span>linkedin.in</span>
+            <i class="link-arrow">â†’</i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__portrait fade-up" style="--d:0.2s">
+        <div class="portrait-frame">
+          <div class="portrait-frame__corner tl"></div>
+          <div class="portrait-frame__corner tr"></div>
+          <div class="portrait-frame__corner bl"></div>
+          <div class="portrait-frame__corner br"></div>
+          <img src="{% static 'portfolio_app/images/profile-photo.png' %}" alt="Portrait of Aadharsh E S" id="profile-photo" />
+          <div class="portrait-frame__tag">
+            <span class="dot-status"></span> open to roles
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-cue__line"></div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="section about">
+    <p class="eyebrow reveal">~/about &nbsp;//&nbsp; 01</p>
+    <h2 class="section-title reveal">Where design judgment meets engineering discipline.</h2>
+
+    <div class="about__grid">
+      <div class="about__lead reveal">
+        <p>
+          Most developers treat the interface as the last step. I treat it as a firstâ€‘class
+          requirement. My work sits at the intersection of <strong>structured backend
+          engineering</strong> and <strong>deliberate interface design</strong> â€” because a
+          system that's technically correct but hard to use hasn't actually solved the
+          problem yet.
+        </p>
+        <p>
+          That dual lens shapes how I build. When I design a screen, I'm already thinking
+          about the data model behind it. When I write a Django view, I'm thinking about
+          the person who'll eventually click the button it serves. I care about roleâ€‘based
+          access that's genuinely secure, inventory logic that doesn't break at the edges,
+          and layouts that don't make the user think twice.
+        </p>
+        <p>
+          I learn by building real, working systems rather than tutorials â€” which is why
+          most of my projects start from an actual operational problem, get scoped properly,
+          and end up shipped, not abandoned.
+        </p>
+      </div>
+
+      <div class="about__stats reveal">
+        <div class="stat-card">
+          <span class="stat-card__num">02</span>
+          <span class="stat-card__label">disciplines<br/>one workflow</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__num">06</span>
+          <span class="stat-card__label">core tools<br/>in daily use</span>
+        </div>
+        <div class="stat-card stat-card--accent">
+          <span class="stat-card__num">100%</span>
+          <span class="stat-card__label">projects built<br/>endâ€‘toâ€‘end</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="section skills">
+    <p class="eyebrow reveal">~/stack &nbsp;//&nbsp; 02</p>
+    <h2 class="section-title reveal">The toolkit, organized like a build pipeline.</h2>
+    <p class="section-sub reveal">Grouped by the layer of the product each tool actually touches.</p>
+
+    <div class="skills__grid">
+
+      <div class="skill-card reveal">
+        <div class="skill-card__head">
+          <span class="skill-card__index">01</span>
+          <h3>Frontend</h3>
+        </div>
+        <p class="skill-card__desc">What the user sees, touches, and judges first.</p>
+        <ul class="skill-card__list">
+          <li><span>HTML5</span><i>structure</i></li>
+          <li><span>CSS3</span><i>styling &amp; layout</i></li>
+          <li><span>JavaScript</span><i>interactivity</i></li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card__head">
+          <span class="skill-card__index">02</span>
+          <h3>Backend</h3>
+        </div>
+        <p class="skill-card__desc">Where logic, data integrity, and access control live.</p>
+        <ul class="skill-card__list">
+          <li><span>Python</span><i>core language</i></li>
+          <li><span>Django</span><i>web framework</i></li>
+          <li><span>MySQL</span><i>relational data</i></li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card__head">
+          <span class="skill-card__index">03</span>
+          <h3>Mobile</h3>
+        </div>
+        <p class="skill-card__desc">Native development for onâ€‘theâ€‘go workflows.</p>
+        <ul class="skill-card__list">
+          <li><span>Android Studio</span><i>app development</i></li>
+          <li><span>Java / Kotlin basics</span><i>app logic</i></li>
+        </ul>
+      </div>
+
+      <div class="skill-card reveal">
+        <div class="skill-card__head">
+          <span class="skill-card__index">04</span>
+          <h3>Design</h3>
+        </div>
+        <p class="skill-card__desc">The judgment layer that decides if it actually works.</p>
+        <ul class="skill-card__list">
+          <li><span>UI Design</span><i>visual systems</i></li>
+          <li><span>UX Design</span><i>flows &amp; usability</i></li>
+          <li><span>Wireframing</span><i>structure first</i></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= WORK ================= -->
+  <section id="work" class="section work">
+    <p class="eyebrow reveal">~/work &nbsp;//&nbsp; 03</p>
+    <h2 class="section-title reveal">Selected work.</h2>
+    <p class="section-sub reveal">Real operational problems, scoped and shipped as complete systems.</p>
+
+    <div class="project-card reveal">
+      <div class="project-card__media">
+        <div class="project-card__media-frame">
+          <span class="project-card__media-label">// project preview</span>
+          <img class="project-card__preview" src="{% static 'portfolio_app/images/project-preview.png' %}" alt="Mini Workshop ERP project homepage preview" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="project-card__body">
+        <span class="project-card__tag">Fullâ€‘stack Â· Django</span>
+        <h3 class="project-card__title">Mini Workshop Management ERP System</h3>
+
+        <div class="project-card__block">
+          <span class="project-card__label">Problem</span>
+          <p>Small automotive workshops typically run on paper job cards, spreadsheets,
+          and memory â€” leading to lost job history, inaccurate spare parts stock, and
+          billing that doesn't match what was actually used or charged.</p>
+        </div>
+
+        <div class="project-card__block">
+          <span class="project-card__label">Solution</span>
+          <p>A Djangoâ€‘based ERP that centralizes the full workshop workflow: customer
+          records, digital job cards, spare parts inventory tracking, and itemized
+          billing â€” gated behind roleâ€‘based access so staff, mechanics, and admins
+          each see exactly what their role needs, nothing more.</p>
+        </div>
+
+        <div class="project-card__block">
+          <span class="project-card__label">Tech Stack</span>
+          <div class="tech-pills">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Django</span>
+            <span class="tech-pill">MySQL</span>
+            <span class="tech-pill">HTML5</span>
+            <span class="tech-pill">CSS3</span>
+            <span class="tech-pill">JavaScript</span>
+          </div>
+        </div>
+
+        <div class="project-card__features">
+          <span class="project-card__label">Core capabilities</span>
+          <ul>
+            <li>Customer &amp; vehicle profile management</li>
+            <li>Job card creation, tracking, and status updates</li>
+            <li>Spare parts inventory with stockâ€‘level visibility</li>
+            <li>Itemized billing generated directly from job cards</li>
+            <li>Roleâ€‘based access control for staff, mechanics, and admins</li>
+          </ul>
+        </div>
+
+        <a href="https://github.com/Aadharsh2006/Mini-Workshop-ERP/tree/0a23f4b77e16c2cf1dd7377b2e5a798ba7018764/workshop_erp" class="project-card__link" target="_blank" rel="noopener">
+          <span>View repository</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="more-projects reveal">
+      <span class="more-projects__line"></span>
+      <p>More projects in progress â€” check the GitHub for the latest.</p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="section contact">
+    <p class="eyebrow reveal">~/contact &nbsp;//&nbsp; 04</p>
+    <h2 class="contact__headline reveal">Let's build<br/>something <span class="hero__accent">worth shipping</span>.</h2>
+    <p class="contact__sub reveal">
+      I'm open to software development and UI/UX roles, internships, and collaborative
+      builds. If you're hiring, reviewing, or just want to talk through a project â€”
+      reach out.
+    </p>
+
+    <div class="contact__actions reveal">
+      <a href="mailto:aadharshespilakkad@gmail.com" class="btn btn--primary btn--lg">
+        <span>Say hello</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+
+    <div class="contact__links reveal">
+      <a href="https://github.com/Aadharsh2006" target="_blank" rel="noopener">GitHub â†—</a>
+      <span class="dot-sep">Â·</span>
+      <a href="https://www.linkedin.com/in/aadharsh-e-s-7a106131a/" target="_blank" rel="noopener">LinkedIn â†—</a>
+      <span class="dot-sep">Â·</span>
+      <a href="mailto:aadharshespilakkad@gmail.com">Email â†—</a>
+    </div>
+
+    <footer class="footer">
+      <span>Â© 2026 Aadharsh E S</span>
+      <span>Built with intent.</span>
+    </footer>
+  </section>
+
+</main>
+
+<script src="{% static 'portfolio_app/js/script.js' %}"></script>
+</body>
+</html>
+
