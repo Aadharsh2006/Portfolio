@@ -289,6 +289,8 @@
 
   <!-- ================= CONTACT ================= -->
   <section id="contact" class="section contact">
+    <div class="contact__layout">
+      <div class="contact__intro">
     <p class="eyebrow reveal">~/contact &nbsp;//&nbsp; 04</p>
     <h2 class="contact__headline reveal">Let's build<br/>something <span class="hero__accent">worth shipping</span>.</h2>
     <p class="contact__sub reveal">
@@ -297,11 +299,33 @@
       reach out.
     </p>
 
-    <div class="contact__actions reveal">
-      <a href="mailto:aadharshespilakkad@gmail.com" class="btn btn--primary btn--lg">
-        <span>Say hello</span>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+      </div>
+
+    <form class="contact-form reveal" method="post" novalidate>
+      {% csrf_token %}
+      <div class="contact-form__field">
+        <label for="contact-name">Name</label>
+        <input id="contact-name" name="name" type="text" maxlength="100" autocomplete="name" placeholder="Your name" value="{{ contact_form.name.value|default:'' }}" required />
+        {% if contact_form.name.errors %}<span class="contact-form__error">{{ contact_form.name.errors.0 }}</span>{% endif %}
+      </div>
+      <div class="contact-form__field">
+        <label for="contact-email">Email</label>
+        <input id="contact-email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="your@email.com" value="{{ contact_form.email.value|default:'' }}" required />
+        {% if contact_form.email.errors %}<span class="contact-form__error">{{ contact_form.email.errors.0 }}</span>{% endif %}
+      </div>
+      <div class="contact-form__field">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" maxlength="5000" rows="7" placeholder="Tell me about your project..." required>{{ contact_form.message.value|default:'' }}</textarea>
+        {% if contact_form.message.errors %}<span class="contact-form__error">{{ contact_form.message.errors.0 }}</span>{% endif %}
+      </div>
+      <input class="contact-form__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      {% if contact_success %}<p class="contact-form__status contact-form__status--success" role="status">Message sent. Thanks — I'll get back to you soon.</p>{% endif %}
+      {% if contact_error %}<p class="contact-form__status contact-form__status--error" role="alert">The message couldn't be sent. Please try again or use the email link below.</p>{% endif %}
+      <button class="contact-form__submit" type="submit">
+        <span>Send message</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 2 11 13" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+      </button>
+    </form>
     </div>
 
     <div class="contact__links reveal">
@@ -322,4 +346,3 @@
 <script src="{% static 'portfolio_app/js/script.js' %}"></script>
 </body>
 </html>
-
